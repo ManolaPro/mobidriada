@@ -1,0 +1,52 @@
+.europe {
+    min-height: 1235px;
+    background-color: #fff;
+    color: #303D4E;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &__title {
+        font-weight: bold;
+        font-size: 23px; 
+        text-align: center;
+        
+        margin-bottom: 30px;
+    }
+    &__description {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 150%;
+        span {
+            font-weight: bold;
+        }
+    }
+    &__keln {
+        width: 290px;
+        height: 290px;
+        border-radius: 5px;
+
+    }
+    &__reason {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 130%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    img {
+        margin-top: 30px;
+    }
+    &__image {
+        width: 125px;
+        height: 125px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__blum {
+        width: 290px;
+        height: 290px;
+        border-radius: 5px;
+    }
+}

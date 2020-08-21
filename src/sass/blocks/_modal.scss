@@ -1,0 +1,237 @@
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #ffffff, $alpha: 0.9);
+    top: 0;
+    display: none;
+    z-index: 2;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 320px;
+    min-height: 480px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background: linear-gradient(280.94deg, #303D4E 10.35%, #303D4E 88.25%);
+    box-shadow: 30px 30px 49px rgba(0, 0, 0, 0.54);
+    border-radius: 10px;
+    z-index: 3;
+    &__step1 {
+        display: none;
+    }
+    &__step2 {
+        display: none;
+    }
+    &__step3 {
+        display: none;
+    }
+    &__step4 {
+        display: none;
+    }
+    &__step5 {
+        display: none;
+    }
+    &__step6 {
+        display: none;
+    }
+    &__step7 {
+        display: none;
+    }
+   
+    &__close {
+            position: absolute;
+            top: -50px;
+            right: 0px;
+            font-size: 50px;
+            line-height: 50px;
+            color:#303d4e;
+            cursor: pointer;
+    }
+    &__give {
+        color: #ffffff;
+        position: relative;
+    }
+    &__progressbar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+        
+    }
+    &__step {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+    }
+    &__progress {
+        width: 209px;
+        height: 8px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 7px;
+        margin-left: 14px;
+        
+        
+        
+        }
+    &__bar {
+        width: 30px;
+        height: 4px;
+        background: rgba(182, 142, 111, 0.9);
+        border-radius: 4px;
+        margin: 2px auto 2px 4px;
+        transition: 2s all;
+        &_step1 {
+            width: 0;
+        }
+        &_step2 {
+            width: 30px;
+        }
+        &_step3 {
+            width: 60px;
+        }
+        &_step4 {
+            width: 90px;
+        }
+        &_step5 {
+            width: 120px;
+        }
+        &_step6 {
+            width: 150px;
+        }
+        &_step7 {
+            width: 180px;
+        }
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        margin: 15px auto;
+        &_margin88 {
+            margin: 33px auto;
+            font-size: 20px;
+        }
+        &_margin34 {
+            margin: 34px auto;
+        }
+        &_m20 {
+            margin: 20px auto;
+        }
+
+    }
+    &__size-title {
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        line-height: 16px;
+        span {
+            font-weight: normal;
+            font-size: 12px;
+        }
+    }
+    &__size-wrapper {
+        height: 104px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 13px;
+    }
+    &__size-img {
+        width: 133px;
+        height: 104px;
+    }
+    &__sizeABC {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+       
+
+        h5 {
+            margin: 0;
+            font-weight: bold;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        input {
+            width: 54px;
+            height: 27px;
+            font-size: 14px;
+            border-radius: 5px;
+            padding-left: 7px;
+
+
+        }
+    }
+    &__bonus {
+        width: 300px;
+        height: 96px;
+        background: url("data:image/svg+xml,%3Csvg width='300' height='96' viewBox='0 0 300 96' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0L25 6.4C50 12.8 100 25.6 150 25.6C200 25.6 250 12.8 275 6.4L300 0V86C300 91.5228 295.523 96 290 96H275C250 96 200 96 150 96C100 96 50 96 25 96H10C4.47715 96 0 91.5228 0 86V0Z' fill='%23B68E6F'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0L25 6.4C50 12.8 100 25.6 150 25.6C200 25.6 250 12.8 275 6.4L300 0V86C300 91.5228 295.523 96 290 96H275C250 96 200 96 150 96C100 96 50 96 25 96H10C4.47715 96 0 91.5228 0 86V0Z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='-5.02036e-07' y1='60.1212' x2='299.941' y2='72.2584' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23B68E6F'/%3E%3Cstop offset='1' stop-color='%23FFD194' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E") no-repeat;
+        margin-left: 10px;
+        text-align: center;
+        color: #303D4E;
+        padding-top: 33px;
+        &_h111 {
+            height: 111px;
+            padding-top: 39px;
+            background: url("data:image/svg+xml,%3Csvg width='300' height='111' viewBox='0 0 300 111' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0L25 7.4C50 14.8 100 29.6 150 29.6C200 29.6 250 14.8 275 7.4L300 0V101C300 106.523 295.523 111 290 111H275C250 111 200 111 150 111C100 111 50 111 25 111H10C4.47715 111 0 106.523 0 101V0Z' fill='%23B68E6F'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0L25 7.4C50 14.8 100 29.6 150 29.6C200 29.6 250 14.8 275 7.4L300 0V101C300 106.523 295.523 111 290 111H275C250 111 200 111 150 111C100 111 50 111 25 111H10C4.47715 111 0 106.523 0 101V0Z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='-5.02036e-07' y1='69.5152' x2='300.064' y2='80.0165' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23B68E6F'/%3E%3Cstop offset='1' stop-color='%23FFD194' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E") no-repeat;
+            
+        }
+        &__title {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 20px;
+            margin-bottom: 9px;
+            &_fs16 {
+                font-size: 16px;
+            }
+            
+        }
+        &__discont {
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 20px;
+            span {
+                margin-left: 15px;
+                display: inline-block;
+                font-size: 20px;
+                animation: heartbeat 1.5s ease infinite;
+            }
+        }
+    }
+    &__speak {
+        position: relative;
+        width: 290px;
+        height: 88px;
+        margin-top: 11px;
+        &__tell {
+            position: absolute;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 140%;
+            top: 10px;
+            left: 14px;
+            color: #303D4E;
+
+        }
+   
+    }
+    &__konsultant {
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 216px;
+        top: 91px;
+        left: 192px;
+        z-index: -1;
+    }
+}
+.btnblock{
+    opacity:0.2;
+    pointer-events:none;
+}

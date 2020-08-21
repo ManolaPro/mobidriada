@@ -1,0 +1,117 @@
+.promo {
+    position: relative;
+    height: 480px;
+    width: 100%;
+    background: linear-gradient(325.14deg, rgba(48, 61, 78, 0.65) 33.11%, rgba(37, 48, 63, 0.65) 71.91%), url(../../img/gerda.jpg) left (center/cover) no-repeat;
+    color: #FFFFFF;
+
+    .header {
+        min-height: 70px;
+        width: 100%;
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    &__wrapper {
+            min-height: 70px;
+            
+        }
+    
+        &__logo {
+            margin-right: 20px;
+            background: #303D4E;
+            box-shadow: 1px 1px 2px rgba(77, 98, 125, 0.3), -1px -1px 2px rgba(19, 24, 31, 0.5), inset -1px 1px 2px rgba(19, 24, 31, 0.2), inset 1px -1px 2px rgba(19, 24, 31, 0.2), inset -1px -1px 2px rgba(77, 98, 125, 0.9), inset 1px 1px 3px rgba(19, 24, 31, 0.9);
+            border-radius: 5px;
+            width: 100px;
+            height: 50px;
+            img {
+                display: block;
+                width: 100px;
+                height: 50px;
+            }
+        }
+        &__contacts {
+            width: 170px;
+            display: flex;
+            justify-content: space-between;
+        
+        } 
+        &__contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 39px;
+            height: 39px;
+            background: #303D4E;
+            box-shadow: 1px 1px 2px rgba(77, 98, 125, 0.3), -1px -1px 2px rgba(19, 24, 31, 0.5), inset -1px 1px 2px rgba(19, 24, 31, 0.2), inset 1px -1px 2px rgba(19, 24, 31, 0.2), inset -1px -1px 2px rgba(77, 98, 125, 0.9), inset 1px 1px 3px rgba(19, 24, 31, 0.9);
+            border-radius: 10px;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 24px;
+        color: #FFFFFF;
+        text-align: left;
+        margin-top: 20px;
+    }
+    &__subtitle {
+        margin-top: 25px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: left;
+        color: #FFFFFF;
+    }
+    &__full {
+        margin-top: 31px;
+        height: 235px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__item {
+            height: 25px;
+            display: flex;
+            align-items: center;
+        }
+        &__ico {
+            height: 25px;
+            width: 25px;
+        }
+        &__text {
+            margin-bottom: 0;
+            margin-left: 17px;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+    &__wrapper {
+        position: absolute;
+        bottom: -150px;
+        width: 100%;
+        height: 160px;
+        background: #2B3747;
+        border-radius: 10px;
+        padding-top: 17px;
+        margin-top: 31px;
+    }
+    &__image {
+        display: block;
+        width: 214px;
+        height: 153px;
+        margin-left: 30px;
+        margin-top: 13px;
+    }
+    &__cta {
+        width: 282px;
+        margin: 0 auto;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 150%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+}

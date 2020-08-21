@@ -1,0 +1,19 @@
+.profit {
+    min-height: 320px;
+    background-color: #fff;
+    color: #303D4E;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &__title {
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    &__description {
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 150%;
+        margin-bottom: 0;
+    }
+}

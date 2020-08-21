@@ -1,0 +1,16 @@
+.review {
+    min-height: 582px;
+    background: linear-gradient(180deg, #303D4E 0%, #25303F 97.4%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius:10px;
+    &__title {
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-align: center;
+        margin-bottom: 30px;
+
+    }
+}

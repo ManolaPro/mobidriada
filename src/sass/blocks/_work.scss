@@ -1,0 +1,96 @@
+.work {
+    min-height: 470px;
+    background-color: #fff;
+    color: #303D4E;
+    .container {
+        position: relative;
+    }
+    
+    &__title {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-weight: bold;
+        font-size: 26px; 
+        line-height: 150%;
+        text-align: center;
+    }
+
+    &__slider-wrapper {
+        width: 290px;
+    }
+    &__slider-inner {
+        scroll-snap-type: x mandatory;
+        display: flex;
+        overflow-x: scroll;
+    }
+    &__slide {
+        scroll-snap-align: start;
+        
+    }
+    &__indicators {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &ul.indicators {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &__indicator-button {
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #333;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+      }
+      
+    &__indicator-button:after {
+        content: '○';
+        font-size: 8px
+      }
+      
+    &__indicator-button:hover {
+        color: #555;
+      }
+      
+    &__indicator-button:active {
+        color: #999;
+        padding: 0;
+      }
+      
+    &__indicator-button[aria-pressed="true"]:after {
+        content: '●';
+      }
+      
+      
+   
+    
+}
+.work__slider-prev , .work__slider-next {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 73%;
+    transform: translateY(-50%);
+    left: -10px;
+    border:none;
+    width: 24px;
+    height: 24px;
+    background: #303D4E;
+    box-shadow: 1px 1px 2px rgba(77, 98, 125, 0.3), -1px -1px 2px rgba(19, 24, 31, 0.5), inset -1px 1px 2px rgba(19, 24, 31, 0.2), inset 1px -1px 2px rgba(19, 24, 31, 0.2), inset -1px -1px 2px rgba(77, 98, 125, 0.9), inset 1px 1px 3px rgba(19, 24, 31, 0.9);
+    border-radius: 100px;
+}
+
+.work__slider-next {
+    right: -10px;  
+    left: auto;
+}
+

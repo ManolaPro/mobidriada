@@ -1,0 +1,41 @@
+.renovation {
+    min-height: 650px;
+    padding-top: 30px;
+    background: linear-gradient(180deg, #303D4E 0%, #25303F 97.4%);
+    color: #FFFFFF;
+    border-radius:10px;
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+    }
+    &__subtitle {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 150%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    &__cta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__icon {
+        width: 50px;
+        height: 50px;
+    }
+    &__call {
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 150%;
+        margin-left: 30px;
+    }
+    &__bonus-title {
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+    }
+}

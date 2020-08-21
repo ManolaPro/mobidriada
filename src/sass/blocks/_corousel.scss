@@ -1,0 +1,51 @@
+.corousel {
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    &__name {
+        text-align: center;
+        font-weight: normal;
+        font-size: 20px;
+    }
+    &__address {
+        font-size: 17px;
+        font-weight: normal;
+        text-align: center;
+    }
+    &__image {
+        margin-top: 20px;
+        width: 320px;
+        height: 205px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+    &__review {
+        width: 290px;
+        height: 433px;
+    }
+}
+.tns-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 17px;
+    button {
+        padding: 0;
+            border: 0;
+            margin: 3px;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            background-color: #c7c7c7;
+            transition: all .2s ease-in-out;
+            &:hover {
+                background-color: #303D4E;
+            }
+            
+        }
+            .tns-nav-active {
+                background-color: #B68E6F !important;
+                
+            }
+}       

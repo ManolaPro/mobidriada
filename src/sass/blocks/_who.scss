@@ -1,0 +1,26 @@
+.who {
+    margin-top: 170px;
+    min-height: 490px;
+    background-color: #fff;
+    text-align: center;
+    color: #303D4E;
+    font-weight: bold;
+    &__title {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+    &__subtitle {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    &__number {
+        margin-top: 20px;
+        font-size: 36px;
+    }
+    &__descr {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 135.2%;
+    }
+
+}
