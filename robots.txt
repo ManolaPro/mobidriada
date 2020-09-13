@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: *.php
+Sitemap: https://driadavrn.ru/sitemap.xml
+Host: https://driadavrn.ru

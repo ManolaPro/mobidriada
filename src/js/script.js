@@ -39,7 +39,6 @@ window.addEventListener('DOMContentLoaded', function(){
                               totalPrice = document.querySelector('.range-price-total');
                               let price = inputPrice.value;
                               totalPrice.innerHTML = price+" 000 руб.";
-                              console.log(price);
                     }
                     if(target && target.classList.contains('form-radio__label__input')) {
                         anblock(i);
@@ -76,12 +75,14 @@ window.addEventListener('DOMContentLoaded', function(){
         tabs[i].classList.add('form__image_active');
     }
 
-    function hideSizeC(i=0) {
-        sizeABC[i+1].classList.add('hide'); 
-        sizeABC[i+1].classList.remove('flex', 'fade');  
-        sizeABC[i+2].classList.add('hide'); 
-        sizeABC[i+2].classList.remove('flex', 'fade');    
-            
+    function hideSizeC() {
+        sizeABC[2].classList.add('hide'); 
+        sizeABC[2].classList.remove('flex', 'fade');  
+    }
+
+    function hideSizeB() {
+        sizeABC[1].classList.add('hide'); 
+        sizeABC[1].classList.remove('flex', 'fade');  
     }
     
     function showSizeABC() {
@@ -103,7 +104,12 @@ window.addEventListener('DOMContentLoaded', function(){
                     hideSizeImg();
                     showSizeImg(i);
                     showSizeABC();
-                    hideSizeC(i);
+                    if (i == 1) {
+                        hideSizeC();
+                    } else if (i == 0){
+                        hideSizeC();
+                        hideSizeB();
+                    }
                     }
                    
                 });
@@ -162,13 +168,22 @@ window.addEventListener('DOMContentLoaded', function(){
           overlay = document.querySelector('.overlay'),
           modalCloseBtn = document.querySelectorAll('[data-close]');
     
-          modalTrigger.forEach(btn => {
+          modalTrigger.forEach((btn,i) => {
             btn.addEventListener('click', function() {
                 modal[0].classList.add('show','fade');
                 modal[0].classList.remove('hide');
                 overlay.classList.add('show','fade');
                 overlay.classList.remove('hide');
                 document.body.style.overflow = 'hidden';
+                if (i == 0) {
+                    ym(66401833,'reachGoal','get3d');
+                }
+                else if (i == 1) {
+                    ym(66401833,'reachGoal','getTechPlan')
+                }
+                else if (i == 2) {
+                    ym(66401833,'reachGoal','getDiscount')
+                }
             });
         });
     
@@ -187,9 +202,9 @@ window.addEventListener('DOMContentLoaded', function(){
         });
 
         
-        quizContent.forEach((cont ,i) => {
+ /*        quizContent.forEach((cont ,i) => {
             cont.addEventListener('click', (e) => {
-                if (e.target === quizContent) {
+                if (e.target === document.querySelector('.overlay')) {
                     closeModal(i);
                 }
             });
@@ -200,7 +215,7 @@ window.addEventListener('DOMContentLoaded', function(){
                 closeModal();
             }
         });
-    
+     */
 
     //slider    
     /* let offset = 0;
@@ -390,7 +405,7 @@ window.addEventListener('DOMContentLoaded', function(){
               
         
         const message = {
-            loading: 'Загрузка...',
+            loading: 'img/quiz/spinner.svg',
             success: 'Спасибо! Скоро мы с вами свяжемся',
             failure: 'Что-то пошло не так...'
         };
@@ -406,6 +421,7 @@ window.addEventListener('DOMContentLoaded', function(){
                 e.preventDefault();
                 const inputChecked = document.querySelectorAll('input:checked');
                 const inputNum = document.querySelectorAll('[data-num]');
+                const thanksSay = document.querySelector('.modal__speak__tell');
                 inputChecked.forEach((item ,i) => {
                 inputHid[i].value = item.value;
                 
@@ -413,12 +429,20 @@ window.addEventListener('DOMContentLoaded', function(){
                 inputNum.forEach((item , i) => {
                     inputHid[i+5].value = item.value;
                 });
-    
-                let statusMessage = document.createElement('div');
-                statusMessage.classList.add('status');
-                statusMessage.textContent = message.loading;
-                form.appendChild(statusMessage);
-            
+                
+                ym(66401833,'reachGoal','sendForm');
+
+                thanksSay.textContent = "";
+                
+                let statusMessage = document.createElement('img');
+                statusMessage.src = message.loading;
+                thanksSay.style.cssText = `
+                        left: 50%;
+                        transform: translateX(-50%);
+                `;
+                
+                thanksSay.insertAdjacentElement('afterbegin', statusMessage);
+
                 const request = new XMLHttpRequest();
                 request.open('POST', 'server.php');
                 request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
@@ -435,16 +459,22 @@ window.addEventListener('DOMContentLoaded', function(){
                 request.addEventListener('load', () => {
                     if (request.status === 200) {
                         console.log(request.response);
-                        statusMessage.textContent = message.success;
+                        showThanksModal(message.success);
                         form.reset();
-                        setTimeout(() => {
-                            statusMessage.remove();
-                        }, 2000);
                     } else {
-                        statusMessage.textContent = message.failure;
+                        showThanksModal(message.failure);
                     }
                 });
             });
+        
+        function showThanksModal(message) {
+            const thanksSay = document.querySelector('.modal__speak__tell');
+            thanksSay.innerHTML = message;
+            thanksSay.style.cssText = `
+                font-size: 18px;
+            `
+        }
+        
         }
     });
 
